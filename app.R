@@ -5,7 +5,6 @@ library(shinythemes)
 library(catR)
 library(shinyBS)
 library(shinyjs)
-library(googlesheets4)
 library(dplyr)
 library(shinydashboardPlus)
 library(shinyWidgets)
@@ -1254,7 +1253,4 @@ ort_sem<-colMeans(tablo,na.rm = T)
   )
 
 }
-server$run(
-  host = '0.0.0.0',
-  port = as.numeric(port)
-)
+shinyApp(ui, server)
