@@ -1254,5 +1254,7 @@ ort_sem<-colMeans(tablo,na.rm = T)
   )
 
 }
-
-shinyApp(ui, server)
+server$run(
+  host = '0.0.0.0',
+  port = as.numeric(port)
+)
